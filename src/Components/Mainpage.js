@@ -23,9 +23,9 @@ function Mainpage() {
                 />
               </div>
             </div>
-            <div className='items-center justify-center mr-36 mt-24'>
-            <img className="w-5/6" src={image2} alt="" />
-          </div>
+            <div className='items-center justify-center mr-36 mt-28'>
+                 <img className="w-5/6" src={image2} alt="" />
+            </div>
             <div className='flex flex-shrink-0 items-center h-18 mr-4'>
                 <img className='block w-auto lg:hidden ' src={image1} alt="" />
                 <img className='hidden w-auto lg:block ' src={image1} alt="" />

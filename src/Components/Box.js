@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from'react'
+import React ,{useState} from'react'
 import icon1 from "../assets/icon1.PNG"
 import icon2 from "../assets/icon2.PNG"
 import icon3 from "../assets/icon3.PNG"
@@ -50,10 +50,10 @@ function Box() {
         setFade2(false);
       };
 
-      const [color, setColor] = useState("yellow");
-
-      const click = color => {
-        setColor(color);
+      const [isYellowColor, setIsYellowColor] = useState(true);
+      console.log(isYellowColor);
+      const click = () => {
+        setIsYellowColor(!isYellowColor);
       };
     
 
@@ -89,8 +89,8 @@ function Box() {
             </div>
        
                {/* icon box 3 */}
-            <div className='box-border h-48 w-48 p-4 rounded-xl mx-6 bg-yellow-400 cursor-pointer' onClick={() => {click("blue")}}
- >
+               <div className={`${isYellowColor ? 'bg-yellow-400 ' : 'bg-black ' }box-border h-48 w-48 p-4 rounded-xl mx-6 cursor-pointer`} onClick={() => click()}>
+ 
                 <div className='flex flex-col justify-center items-center'>
                 
                     <img className='h-16 w-12' src={icon3} alt="" /> 
